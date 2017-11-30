@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <title>Checkout - [Pennor.com]</title>
+</head>
+
+<body>
+<header id="header">
+
+      <div class="container">
+        <button class="logo">
+    <img src="images/pennorLogo_mini_test.png" alt="Logo" title="Pennor.com">
+  </button>
+        <div id="nav">
+          <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+  </ul>
+        </div>
+      </div>
+      <center><img class="break" src="images/break.png" alt="breakline"></center>
+    </header>
+
+  <main class="main_checkout">
+
+    <span class="product_list">
+<h1>Checkout</h1>
+       <table id="product_numbers1">
+          <tr class="test">
+            <th><img src="images/auto1_mini.jpg"></th>
+            <th id="art_number">159876/Caran d'Ache 120 pieces</th>
+            <th><u>Web:</u> in stock</th>
+            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>
+            <th><u>Price:</u> 150:-</th>
+            <th><a href=""><img title="Remove" src="images/trashbinsmal.png"></a></th>
+          </tr>
+        </table>
+        <table id="product_numbers">
+          <tr class="test">
+            <th><img src="images/auto3_mini.jpg"></th>
+            <th id="art_number">967823/Handmade Natural Twig Pencils </th>
+            <th><u>Web:</u> in stock</th>
+            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>
+            <th><u>Price:</u> 236:-</th>
+            <th><a href=""><img title="Remove" src="images/trashbinsmal.png"></a></th>
+          </tr>
+        </table>
+        <table id="product_numbers">
+          <tr class="test">
+            <th><img src="images/ViscontiVanGogh_mini.jpg"></th>
+            <th id="art_number">096148/Visconti Van Gogh Fountain Pen</th>
+            <th><u>Web:</u> in stock</th>
+            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>
+            <th><u>Price:</u> 2627:-</th>
+            <th><a href=""><img title="Remove" src="images/trashbinsmal.png"></a></th>
+          </tr>
+        </table>
+        <table id="product_numbers">
+          <tr class="test">
+            <th><img src="images/auto2_mini.jpg"></th>
+            <th id="art_number">356816/Staples #2 Pencil 12pk</th>
+            <th><u>Web:</u> in stock</th>
+            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>
+            <th><u>Price:</u> 200:-</th>
+            <th><a href=""><img title="Remove" src="images/trashbinsmal.png"></a></th>
+          </tr>
+        </table>
+
+        <span class="shit">
+  <ul id="total">
+    <li>Vat 25%: 803,25sek</li>
+    <li id="totalsek"><u>Total</u></li>
+    <li id="totalsek">3213sek</li>
+    <li>SCROLL DOWN TO PLACE ORDER!</li>
+  </ul>
+</span>
+
+</span>
+
+
+<form action="thankyou.html" class="right_list">      <span class="info">
+        <h3>Shipping information</h3>
+
+          <label><u>First name</u></label>
+          <input id="input_info" type="text" name="First name" required>
+            <label><u>Last name</u></label>
+            <input id="input_info" type="text" name="Last name" required>
+          <label><u>Street adress</u></label>
+          <input id="input_info" type="text" name="Street adress" required>
+          <label><u>Zip code</u></label>
+          <input id="input_info" type="text" name="Zip code" pattern="[0-9]+" required >
+        <label><u>City</u></label>
+        <input id="input_info" type="text" name="City" required>
+            <label><u>Country</u></label>
+            <select id="country" name="country" required>
+    <option value="se"> </option>
+    <option value="se">Sweden</option>
+    <option value="de">Denmark</option>
+    <option value="no">Norway</option>
+  </select>
+          <label><u>Email</u></label>
+          <input id="input_info" type="email" name="Email" required>
+      </span>
+      <span class="form_bottom">
+      <table class="shipping" >
+
+        <tr>
+          <td><u><h4>Delivery</h4></u></td>
+        </tr>
+        <tr>
+          <td><label>Standard</label></td>
+          <td><input type="radio" name="radio1"></td>
+        </tr>
+        <tr>
+          <td><label>Express</label></td>
+          <td><input type="radio" name="radio1"></td>
+        </tr>
+        <tr>
+          <td><label>Home delivery</label></td>
+          <td><input type="radio" name="radio1"></td>
+        </tr>
+        <tr>
+          <td><label>Store pickup</label></td>
+          <td><input type="radio" name="radio1"></td>
+        </tr>
+      </table>
+
+      <table class="shipping">
+        <tr>
+          <td><u><h4>Payment</h4></u></td>
+        </tr>
+        <tr>
+          <td><label>Card</label></td>
+          <td><input type="radio" name="radio"></td>
+        </tr>
+        <tr>
+          <td><label>Klarna</label></td>
+          <td><input type="radio" name="radio"></td>
+        </tr>
+        <tr>
+          <td><label>Swish</label></td>
+          <td><input type="radio" name="radio"></td>
+        </tr>
+        <tr>
+          <td><label>Bitcoin</label></td>
+          <td><input type="radio" name="radio"></td>
+        </tr>
+      </table>
+     </span>
+
+     <!--här är till en ny grej-->
+
+     <span>
+      <table id="last_total">
+        <tr>
+          <td>Vat 25%:</td>
+          <td>803,25sek</td>
+        </tr>
+        <tr>
+          <td>Shipping:</td>
+          <td>98sek</td>
+        </tr>
+        <tr>
+          <td><u>Total</u>:</td>
+          <td>3313sek</td>
+        </tr>
+      </table>
+
+     </span>
+
+     <span class="checkout_button_mini">
+      <input id="submit_button_checkout_mini" type="submit" name="" value="submit">
+     </span>
+
+      </form>
+
+  </main>
+
+
+
+<footer>
+  <center><img class="break" src="images/break.png" alt="breakline"></center>
+  <p class="followUs">Follow us:</p>
+  <div class="socialMedia">
+    <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="facebook" title="Facebook"></a>
+    <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram" title="Instagram"></a>
+    <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter" title="Twitter"></a>
+    <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube" title="YouTube"></a>
+  </div>
+  <p>Copyright &#169; Pennor.com</p>
+</footer>
+</body>
+
+</html>
