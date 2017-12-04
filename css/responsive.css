@@ -275,7 +275,10 @@ footer
 /*-------------PRODUCTS---------*/
 
 /*-------------CHECKOUT---------*/
-
+.table_row_image{
+  width: 90px;
+  height: 70px;
+}
 .product_list
 {
   display: flex;

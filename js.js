@@ -34,16 +34,92 @@ $(document).ready(function () {
         $(".item_description_img").attr('src', imageURL);
         $(".item_description_h3").html(title);
         $(".item_description_p").html(description);
-        $(".item_price").html('Price: ' + price);
+        $(".item_price").html('Price: ' + price + ' kr');
     } );
+
     $(".addCart").on("click", function(){
-        alert(items[clickedItem].title + "added to cart");
+            var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+            if(existingEntries == null) existingEntries = [];
+            var addedItem = items[clickedItem];
+            var found = false;
+            for(var i = 0; i < existingEntries.length; i++){
+                if(addedItem.title === existingEntries[i].title){
+                    existingEntries[i].quantity ++;
+                    found = true;
+                }
+        }
+        if(found === false)existingEntries.push(addedItem);
+        console.log(existingEntries);
+        localStorage.setItem("itemList", JSON.stringify(existingEntries));
     });
 
     //CHECKOUT FUNCTIONS
     if($("body#checkout_page").length > 0){
+        drawTable();
+        calculatePrice();
 
-        
+       function drawTable() {
+           $(".product_list").html("");
+           var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+           console.log(existingEntries.length);
+           if(existingEntries == null) existingEntries = [];
+           for(var i = 0; i < existingEntries.length; i++){
+               var itemImage = existingEntries[i].imageURL;
+               var itemTitle = existingEntries[i].title;
+               var itemPrice = existingEntries[i].price;
+               var itemQuantity = existingEntries[i].quantity;
+
+               var tableRow = $('<table id="product_numbers1">\n' +
+                   '          <tr class="test">\n' +
+                   '            <th><img class = "table_row_image"></th>\n' +
+                   '            <th id="art_number"></th>\n' +
+                   '            <th><u>Web:</u> in stock</th>\n' +
+                   '            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>\n' +
+                   '            <th id="table_price"></th>\n' +
+                   '            <th><button class="remove_item">REMOVE</button></th>\n' +
+                   '          </tr>\n' +
+                   '        </table>')
+               tableRow.data("item", i);
+               $(tableRow).find('tr').children("th:first").find('img').attr('src', itemImage);
+               $(tableRow).find("#art_number").html(itemTitle);
+               $(tableRow).find("#table_price").html(itemPrice + '' + ':-' );
+               $(tableRow).find("#input").val(itemQuantity);
+               $(".product_list").prepend(tableRow);
+               lastItemTitle = itemTitle;
+           };
+       }
+
+       $('.product_list').on("click", '.remove_item', function(){
+            var clickedItem = $(this).closest('table').data("item");
+           var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+           var index = existingEntries.indexOf(clickedItem);
+           existingEntries.splice(clickedItem,1);
+           localStorage.setItem("itemList", JSON.stringify(existingEntries));
+           $(this).closest('table').remove();
+           drawTable();
+           calculatePrice();
+       });
+
+       function calculatePrice(){
+           var total = 0;
+           var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+           if(existingEntries == null) existingEntries = [];
+            for(var i = 0; i < existingEntries.length; i++ ){
+                total += existingEntries[i].price * existingEntries[i].quantity;
+            }
+            $(".total").html(total);
+            console.log('TOTAL PRICE IS' + ' ' + total + ':-');
+       }
+
+        $('.product_list').on("keyup", '#input', function(){
+            var clickedItem = $(this).closest('table').data("item");
+            var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+            console.log("changed from quantity" + existingEntries[clickedItem].quantity + "to" + " " + $(this).val() )
+            existingEntries[clickedItem].quantity = $(this).val();
+            localStorage.setItem("itemList", JSON.stringify(existingEntries));
+            calculatePrice();
+        });
+
 
     }
 

@@ -288,6 +288,11 @@ footer
 {
   text-align: left;
 }
+#product_numbers1 img
+{
+  height: 100px;
+  width: 100px;
+}
 
 
 #input
