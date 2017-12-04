@@ -83,7 +83,6 @@ footer
   right: 0;
   bottom: 0;
   left: 0;
-
 }
 /*-------------HOME---------*/
 @keyframes slidy {
@@ -193,66 +192,86 @@ footer
 /*-------------CONTACT---------*/
 
 /*-------------PRODUCTS---------*/
-.addButton {
-  width: 20px;
+.products_main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  border-top-color: black;
 }
-.removeButton {
-  width: 20px;
+
+.products_items_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  max-height: 800px;
 }
-.description_container{
-  width: 30%;
+
+.products_description_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
-.image_container{
-  width: 300px;
-  height: 200px;
+
+.item_description_div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-style: outset;
+  margin-top: 10px;
+  margin-right: 70px;
+  width: 500px;
+  height: 550px;
+  align-self: center;
 }
-.productImage {
-  width: 300px;
-  height: 200px;
+
+.item_description_img {
+  width: 280px;
+  height: 240px;
+
 }
-.productInput{
-  width: 25px;
-  height: 16px;
+
+.item_description_p {
+
 }
-.productPCS{
+
+.item_description_h3 {
+}
+
+.item_price {
+  font-weight: bold;
+}
+
+.item_div {
+  position: relative;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 10px;
+  width: 170px;
+  height: 150px;
+  align-self: center;
+}
+
+.item_div > img {
+  left: 10%;
+  top: 20px;
+  position: absolute;
+  width: 150px;
+  height: 120px;
+}
+
+.item_div > p {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  font-weight: bold;
   font-size: 15px;
 }
-.productDescription {
-  font-size: 14px;
-  text-align: left;
-  word-break: normal;
-}
-.product_table_container{
+
+.item_description {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.product_table{
   width: 80%;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
-}
-.productPrice {
-  color: #010101;
-  font-size: 20px;
-}
-#overline {
-  text-decoration: line-through;
-}
-.product_table_headline{
-  color: #010101;
-  font-size: 20px;
-}
-.productPriceDiscount {
-  color: #f80e00;
-  font-size: 20px;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-
-  opacity: 1;
-
+  margin-top: 50px;
 }
 /*-------------PRODUCTS---------*/
 
@@ -511,7 +530,7 @@ header > ul > li > a{
     display: block;
 
 }
-#nav < ul
+#nav > ul
 {
   display: flex;
   flex-direction: column;

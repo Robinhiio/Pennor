@@ -1,139 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <meta name="description" content="This page shows product information and prices for all products at pennor.com">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <title>Products - [Pennor.com]</title>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
-<header id="header">
-    <div class="container">
-        <button class="logo">
-            <img src="images/pennorLogo_mini_test.png" alt="Logo" title="Pennor.com">
-        </button>
-        <div id="nav">
-            <ul>
-                <li><a title="Home" href="home.html">Home</a></li>
-                <li><a title="Products" href="products.html">Products</a></li>
-                <li><a title="Contact" href="contact.html">Contact</a></li>
-                <li><a title="Checkout" href="checkout.html">Checkout</a></li>
-            </ul>
+
+<main class="products_main">
+    <div class="products_items_section"></div>
+    <div class=products_description_section>
+        <div class=item_description_div>
+            <img class="item_description_img" src="images/auto2.jpg" height="472" width="600"/>
+            <h3 class = "item_description_h3" >Title</h3>
+            <p class = item_description_p>'Beautiful wooden pencils handmade in India using offcuts from Neem trees during pruning, meaning no trees
+                are harmed for the production of these pencils. This 10 pieces package of these friendly pencils is a
+                perfect gift for the holidays and birthdays. The Twig pencils are wonderful for both writing and sketching.
+                Sharpening is easily done with a craft knife and the lead is full lenght. The pencils are carefully wrapped
+                during the transport to ensure the lead arrives safely. '</p>
+            <p class = item_price></p>
         </div>
     </div>
-    <center><img class="break" src="images/break.png" alt="breakline"></center>
-</header>
-
-<main class="main_checkout">
-
-
-<h1>Products</h1>
-
-
-       <table summary="List of all the products at Pennor.com" class="product_table">
-          <tr>
-            <th><h2 class="product_table_headline">Product</h2></th>
-            <th><h2 class="product_table_headline">Description</h2></th>
-            <th><h2 class="product_table_headline">Price</h2></th>
-            <th><h2 class="product_table_headline">Quantity</h2></th>
-            <th></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Staples #2 Pencil 12 piece set #356816" class="productImage" src="images/auto2.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Staples #2 Pencil 12pk #356816</em><br>The traditional design of the Staples #2 brings back memories from grade school, all while meeting the demands of the grown up world. The top notch lead is designed to remain in one piece as you write, so there is no need to worry about stray lead shavings smudging up your documents. The built in rubber eraser helps you correct errors without leaving any traces.</p></th>
-            <th><span class="productPrice" id="overline">400:-<br></span><span class="productPriceDiscount">200:-</span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span
-                    class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Handmade Natural Twig Pencils 10 piece set #967823" class="productImage" src="images/auto3.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Handmade Natural Twig Pencils 10 piece set #967823</em><br>Beautiful wooden pencils handmade in India using offcuts from Neem trees during pruning, meaning no trees are harmed for the production of these pencils. This 10 pieces package of these friendly pencils is a perfect gift for the holidays and birthdays. The Twig pencils are wonderful for both writing and sketching. Sharpening is easily done with a craft knife and the lead is full lenght. The pencils are carefully wrapped during the transport to ensure the lead arrives safely. </p></th>
-            <th><span class="productPrice">236:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span
-                    class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-           <tr>
-            <th class="image_container"><div><img title="Caran d'Ache 120 pieces color set 'Pablo' #159876" class="productImage" src="images/auto1.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Caran d'Ache 120 pieces color set 'Pablo' #159876</em><br>Imported straight from the factory in Geneva, Switzerland, these brightly colored traditional Pablo pencils from Caran d'Ache is a must for every artist. Made by eco friendly standards, these dry 3.8mm diameter leads offers one of the widest existing color ranges with 120 nuances. The special formula in the lead ensures high covering power and no residue powder, making the Pablos perfect for a large number of backgrounds, ranging from variously textured paper to wooden panels.</p></th>
-            <th><span class="productPrice" id="overline">250:-<br></span><span class="productPriceDiscount">150:-</span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span
-                    class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Tombow Dual Brush Pen 10 piece set #810247" class="productImage" src="images/tombowBrush.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Tombow Dual Brush Pen 10 piece set #810247</em><br>With it's flexible brush tip and fine tip combo, this Tombow pen is a favorite with artists and crafters alike. The brush tip works like a paintbrush to create fine, medium or bold strokes and the fine tip gives consistent lines. The waterbased ink is blendable and the tips selfcleans. These brush pens comes in a 10 pack with standard colors.</p></th>
-            <th><span class="productPrice">199:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Sakura Pigma Brush Pen 9 piece set #810247" class="productImage" src="images/PigmaBrush2.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Sakura Pigma Brush Pen 9 piece set #810247</em><br>Writes like a pen, paints like a brush. The Pigma Brush is comfortable to hold and responds instantly to changes in direction and/or pressure. The waterproof ink does not bleed and does not smear. The synthetic solid brush keeps its shape and does not fray, making the ink flow steady, no matter how much you use it.</p></th>
-            <th><span class="productPrice">149:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Sakura Pigma Micron 7 piece set 'Black' #568751" class="productImage" src="images/SakuraPigmaMicron.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Sakura Pigma Micron 7 piece set 'Black' #568751</em><br>This permanent, fade resistant, pigment-based ink will not bleed or run if liquids are spilled on it. These Pigma Micron Fineliners comes in a pack of 7 with sizes from the small .20 mm to .50 mm and are used by artists all over the world to create fine and precise lines</p></th>
-            <th><span class="productPrice">149:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Staedtler Triplus Fineliner 10 piece set #236571" class="productImage" src="images/staedtlerTriplusFineliner.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Staedtler Triplus Fineliner 10 piece set #236571</em><br>The Staedtler Triplus Fineliner is a super fine long-lasting pen with waterbased ink in bright colors. With a metal clad tip and triangular barrel, these fineliners provides fatigue free usage and they are dry safe, meaning the cap can be left off for days without the ink drying up.</p></th>
-            <th><span class="productPrice">129:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Visconti Van Gogh Fountain Pen - Starry Night Edition #096148" class="productImage" src="images/ViscontiVanGogh.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Visconti Van Gogh Fountain Pen - Starry Night Edition #096148</em><br> Made from natural resin mixed to represent palettes of oil paint inspired by Vincent Van Gogh's colors and techniques. This Starry Night pen features a fine steel nib and a converter, but also supports international short cartrigdes. The cap is magnetic and postable, making it a well balanced pen. The Starry Night comes packaged in an unique gift box that is complementedwith a faithfully reproduced canvas of the painting.</p></th>
-            <th><span class="productPrice">2627:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-          <tr>
-            <th class="image_container"><div><img title="Aurora Optima Black Resin Gold #001327" class="productImage" src="images/auroraOptima.jpg"></div></th>
-            <th class="description_container"><p class="productDescription"><em>Aurora Optima Black Resin Gold #001327</em><br> A high quality fountain pen with a gold trim and a polished black resin body, the Aurora Optima has it's roots in the 1930's, but has a timeless design. The Aurora standard 14k gold medium nib makes it a delight to write with as it smoothly glides over the paper. The filling mechanism is a standard piston and the transparent ink window makes it easy to see when it's time to refil the pen. The cap is threaded and postable for the use who prefers a longer pen.</p></th>
-            <th><span class="productPrice">1568:-<br></span></th>
-            <th><input class="productInput" type="number" placeholder="0" min="0" max="10" name="nr:"><span class="productPCS">/Pcs</span></th>
-            <th><a href=""><img class="addButton" title="Add" src="images/addButton.jpg"></a></th>
-            <th><a href=""><img class="removeButton" title="Remove" src="images/trashbinsmal.png"></a></th>
-          </tr>
-        </table>
-
 </main>
 
-<footer>
-    <center><img class="break" src="images/break.png" alt="breakline"></center>
-    <p class="followUs">Follow us:</p>
-    <div class="socialMedia">
-        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="facebook"
-                                                                title="Facebook"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram"
-                                                                 title="Instagram"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="images/twitter.png" alt="twitter"
-                                                               title="Twitter"></a>
-        <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="youtube"
-                                                               title="YouTube"></a>
-    </div>
-    <p>Copyright &#169; Pennor.com</p>
-</footer>
+<script src="data.js"></script>
+<script src="js.js"></script>
 </body>
-
 </html>

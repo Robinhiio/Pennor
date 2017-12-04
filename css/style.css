@@ -176,67 +176,86 @@ footer
 /*-------------CONTACT---------*/
 
 /*-------------PRODUCTS---------*/
-.addButton    {
-  background:url(../images/addButton.jpg);
-  background-size: cover;
-  width:1.5vw;
-  height:3.1vh;
-  border: 0;
-  margin-left: 1.5vw;
-}
-.removeButton    {
-  background:url(../images/trashbinsmal.png);
-  background-size: cover;
-  width:1.5vw;
-  height:1.5vw;
-  border: 0;
-  margin-left: 1.5vw;
+.products_main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  border-top-color: black;
 }
 
-
-.productDescription {
-  font-size: 1vw;
-  padding-left: 1vw;
-  display: inline-block;
-  height: 10vh;
-  width: 15vw;
+.products_items_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  max-height: 800px;
 }
 
-.productImage {
-  height: 20vh;
-  width: 12vw;
+.products_description_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
-.productPrice {
-  font-size: 1.2vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  color: #010101;
-}
-#overline{
-  text-decoration: line-through;
-}
-
-
-.productPriceDiscount {
-  font-size: 1.2vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  color: #f80e00;
+.item_description_div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-style: outset;
+  margin-top: 10px;
+  margin-right: 70px;
+  width: 500px;
+  height: 550px;
+  align-self: center;
 }
 
-.productTable tr:first-child {
-  font-size: 1.2vw;
-  height: 3vw;
+.item_description_img {
+  width: 280px;
+  height: 240px;
+
 }
 
-.productTable {
-  width: 100%;
-  border-collapse: collapse;
+.item_description_p {
+
 }
 
-.productTable th {
-  border: solid 1px;
+.item_description_h3 {
+}
+
+.item_price {
+  font-weight: bold;
+}
+
+.item_div {
+  position: relative;
+  box-shadow: 10px 10px 5px #888888;
+  margin: 10px;
+  width: 170px;
+  height: 150px;
+  align-self: center;
+}
+
+.item_div > img {
+  left: 10%;
+  top: 20px;
+  position: absolute;
+  width: 150px;
+  height: 120px;
+}
+
+.item_div > p {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.item_description {
+  display: flex;
+  width: 80%;
+  margin-top: 50px;
 }
 /*-------------PRODUCTS---------*/
 
