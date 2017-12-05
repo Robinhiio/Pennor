@@ -1,6 +1,18 @@
 body{
   font-family: Courier New;
 }
+.cart{
+  display: flex;
+  flex-direction: row;
+}
+.cart_image{
+  width: 60px;
+  height: 60px;
+}
+.cart_quantity{
+  margin-right: 10px;
+  font-weight: bold;
+}
 .indexHeader{
   position: absolute;
   background: #ffffff;
