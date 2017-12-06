@@ -317,6 +317,9 @@ footer
     box-shadow:0px 0px 5px #444444;
     display:none;
 }
+.box > h4{
+  text-align: center;
+}
 
 .close
 {
