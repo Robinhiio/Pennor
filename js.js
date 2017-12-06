@@ -57,6 +57,7 @@ $(document).ready(function () {
     //CHECKOUT FUNCTIONS
     if ($("body#checkout_page").length > 0) {
         var shippingCost = 29;
+        var lastRemovedItem = "";
         drawTable();
         calculatePrice();
 
@@ -89,11 +90,13 @@ $(document).ready(function () {
                 $(".product_list").prepend(tableRow);
                 lastItemTitle = itemTitle;
             }
+            $(".product_list").append('<button class ="undo">Undo</button>');
             ;
         }
 
         $('.product_list').on("click", '.remove_item', function () {
             var clickedItem = $(this).closest('table').data("item");
+            lastRemovedItem = items[clickedItem];
             var existingEntries = JSON.parse(localStorage.getItem("itemList"));
             var index = existingEntries.indexOf(clickedItem);
             existingEntries.splice(clickedItem, 1);
@@ -102,6 +105,20 @@ $(document).ready(function () {
             drawTable();
             calculatePrice();
             countTotalQuantity();
+        });
+
+        $(".product_list").on("click", ".undo", function () {
+            if(lastRemovedItem != "") {
+                console.log(lastRemovedItem);
+                var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+                existingEntries.push(lastRemovedItem);
+                localStorage.setItem("itemList", JSON.stringify(existingEntries));
+                lastRemovedItem = "";
+                drawTable();
+                calculatePrice();
+                countTotalQuantity();
+            }
+
         });
 
         function calculatePrice() {
