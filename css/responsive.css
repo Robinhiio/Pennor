@@ -321,6 +321,9 @@ footer
   text-align: center;
 }
 
+.box > p{
+  text-align: center;
+}
 .close
 {
   float:right;
