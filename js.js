@@ -7,11 +7,9 @@ $(document).ready(function () {
     $(".item_price").html('Price: ' + items[0].price);
 
     drawItems();
+    countTotalQuantity();
     var existingEntries = JSON.parse(localStorage.getItem("itemList"));
-    /*
-    var totalQuantity = countTotalQuantity(existingEntries);
-    $('.cart_quantity').text("[" + totalQuantity + "]");
-*/
+
     function drawItems() {
         for (var i = 0; i < items.length; i++) {
             var itemDiv = $('<div class="item_div"></div>').data("item", i);    //CREATE DIV THATH CONTAIN ITEM NUMBER INDEX
@@ -22,7 +20,6 @@ $(document).ready(function () {
 
             var itemTitle = $('<p>' + items[i].title + '</p>');                 //CREATE P WITH THE IMAGE TITLE
             itemDiv.append(itemImg);                                            // ADD IMAGE AND P TO THE ITEM DIV
-            //  itemDiv.append(itemTitle);
         }
     }
 
@@ -52,15 +49,9 @@ $(document).ready(function () {
             }
         }
         if (found === false) existingEntries.push(addedItem);
-
-       // var totalQuantity = countTotalQuantity(existingEntries);
-
         localStorage.setItem("itemList", JSON.stringify(existingEntries));
         flyToElement($(".item_description_img"), $(".cart"));
-        /*
-        console.log(totalQuantity);
-        $('.cart_quantity').text("[" + totalQuantity + "]");
-        */
+        countTotalQuantity();
     });
 
     //CHECKOUT FUNCTIONS
@@ -133,15 +124,17 @@ $(document).ready(function () {
 
 
     }
-/*
-    function countTotalQuantity(existingEntries) {
+
+    function countTotalQuantity() {
+        var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+        if (existingEntries == null) existingEntries = [];
         var totalQuantity = 0;
         for (var i = 0; i < existingEntries.length; i++) {
             totalQuantity += existingEntries[i].quantity;
         }
-        return totalQuantity;
+        $(".cart_quantity").text("Items: " + totalQuantity)
     }
-*/
+
 
 });
 
