@@ -113,8 +113,8 @@ footer
 .slider { overflow: hidden; }
 .slider figure img {width: 20%; float: left;}
 .slider figure {
-  position: relative; 
-  
+  position: relative;
+
   width: 500%;
   margin: 0;
   left: 0;
@@ -284,6 +284,18 @@ footer
   width: 80%;
   margin-top: 50px;
 }
+/* new from linn*/
+#comments{
+  display: none;
+}
+.yourComment{
+  display: none;
+}
+#commentsSection{
+  display: none;
+}
+/* new from Linn */
+
 /*-------------PRODUCTS---------*/
 
 /*-------------CHECKOUT---------*/
