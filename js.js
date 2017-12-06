@@ -75,7 +75,7 @@ $(document).ready(function () {
                     '            <th><img class = "table_row_image"></th>\n' +
                     '            <th id="art_number"></th>\n' +
                     '            <th><u>Web:</u> in stock</th>\n' +
-                    '            <th><input id="input" type="text" placeholder="1" name="nr:">/Pcs</th>\n' +
+                    '            <th><input id="input" type="number" placeholder="1" name="nr:">/Pcs</th>\n' +
                     '            <th id="table_price"></th>\n' +
                     '            <th><button class="remove_item">REMOVE</button></th>\n' +
                     '          </tr>\n' +
@@ -100,6 +100,7 @@ $(document).ready(function () {
             $(this).closest('table').remove();
             drawTable();
             calculatePrice();
+            countTotalQuantity();
         });
 
         function calculatePrice() {
@@ -113,26 +114,28 @@ $(document).ready(function () {
             console.log('TOTAL PRICE IS' + ' ' + total + ':-');
         }
 
-        $('.product_list').on("keyup", '#input', function () {
+        $('.product_list').on("click", '#input', function () {
             var clickedItem = $(this).closest('table').data("item");
             var existingEntries = JSON.parse(localStorage.getItem("itemList"));
-            console.log("changed from quantity" + existingEntries[clickedItem].quantity + "to" + " " + $(this).val())
             existingEntries[clickedItem].quantity = $(this).val();
             localStorage.setItem("itemList", JSON.stringify(existingEntries));
             calculatePrice();
+            countTotalQuantity();
         });
+
+
 
 
     }
 
     function countTotalQuantity() {
+        var total = 0;
         var existingEntries = JSON.parse(localStorage.getItem("itemList"));
         if (existingEntries == null) existingEntries = [];
-        var totalQuantity = 0;
         for (var i = 0; i < existingEntries.length; i++) {
-            totalQuantity += existingEntries[i].quantity;
+            total += existingEntries[i].quantity *1;
         }
-        $(".cart_quantity").text("Items: " + totalQuantity)
+        $(".cart_quantity").text("Items: " + total)
     }
 
 
