@@ -75,7 +75,7 @@ $(document).ready(function () {
                     '            <th><img class = "table_row_image"></th>\n' +
                     '            <th id="art_number"></th>\n' +
                     '            <th><u>Web:</u> in stock</th>\n' +
-                    '            <th><input id="input" type="number" placeholder="1" name="nr:">/Pcs</th>\n' +
+                    '            <th><input id="input" min="1" type="number" placeholder="1" name="nr:">/Pcs</th>\n' +
                     '            <th id="table_price"></th>\n' +
                     '            <th><button class="remove_item">REMOVE</button></th>\n' +
                     '          </tr>\n' +
