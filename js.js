@@ -8,9 +8,10 @@ $(document).ready(function () {
 
     drawItems();
     var existingEntries = JSON.parse(localStorage.getItem("itemList"));
+    /*
     var totalQuantity = countTotalQuantity(existingEntries);
     $('.cart_quantity').text("[" + totalQuantity + "]");
-
+*/
     function drawItems() {
         for (var i = 0; i < items.length; i++) {
             var itemDiv = $('<div class="item_div"></div>').data("item", i);    //CREATE DIV THATH CONTAIN ITEM NUMBER INDEX
@@ -52,12 +53,14 @@ $(document).ready(function () {
         }
         if (found === false) existingEntries.push(addedItem);
 
-        var totalQuantity = countTotalQuantity(existingEntries);
+       // var totalQuantity = countTotalQuantity(existingEntries);
 
         localStorage.setItem("itemList", JSON.stringify(existingEntries));
         flyToElement($(".item_description_img"), $(".cart"));
+        /*
         console.log(totalQuantity);
         $('.cart_quantity').text("[" + totalQuantity + "]");
+        */
     });
 
     //CHECKOUT FUNCTIONS
@@ -130,7 +133,7 @@ $(document).ready(function () {
 
 
     }
-
+/*
     function countTotalQuantity(existingEntries) {
         var totalQuantity = 0;
         for (var i = 0; i < existingEntries.length; i++) {
@@ -138,7 +141,7 @@ $(document).ready(function () {
         }
         return totalQuantity;
     }
-
+*/
 
 });
 
