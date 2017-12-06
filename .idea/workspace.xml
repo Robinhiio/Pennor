@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9356cf4-77b4-4fc4-962c-1db869e918a3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.js" afterPath="$PROJECT_DIR$/data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js.js" afterPath="$PROJECT_DIR$/js.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +68,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="328">
               <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-              <folding />
+              <folding>
+                <marker date="1512557790776" expanded="true" signature="13:36" ph="[...]" />
+                <marker date="1512557790776" expanded="true" signature="22:36" ph="{&quot;title&quot;: 'TITLE 1'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -324,12 +328,12 @@
       <workItem from="1512390521047" duration="4234000" />
       <workItem from="1512412576715" duration="12355000" />
       <workItem from="1512475938275" duration="7701000" />
-      <workItem from="1512550618228" duration="7075000" />
+      <workItem from="1512550618228" duration="7160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83472000" />
+    <option name="totallyTimeSpent" value="83557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -716,7 +720,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding />
+          <folding>
+            <marker date="1512557790776" expanded="true" signature="13:36" ph="[...]" />
+            <marker date="1512557790776" expanded="true" signature="22:36" ph="{&quot;title&quot;: 'TITLE 1'...}" />
+          </folding>
         </state>
       </provider>
     </entry>
