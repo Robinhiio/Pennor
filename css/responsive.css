@@ -39,10 +39,6 @@ header{
   text-decoration: none;
   color: #000000;
 }
-main{
-  padding-top: 15vh;
-}
-
 #nav > ul > li
 {
   margin-right: 10vw;
@@ -207,7 +203,6 @@ footer
 .products_main {
   display: flex;
   flex-direction: row;
-  margin-top: 0;
   border-top-color: black;
 }
 
@@ -234,7 +229,6 @@ footer
   margin-top: 10px;
   margin-right: 70px;
   width: 500px;
-  height: 600px;
   align-self: center;
 }
 
@@ -244,7 +238,7 @@ footer
 }
 
 .item_description_p {
-
+  margin: 15px;
 }
 
 .item_description_h3 {
