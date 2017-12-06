@@ -46,28 +46,29 @@
           <li>SCROLL DOWN TO PLACE ORDER!</li>
       </ul>
 
-<form action="thankyou.html" class="right_list">      <span class="info">
+<div  class="right_list">
+    <span class="info">
         <h3>Shipping information</h3>
 
           <label><u>First name</u></label>
-          <input id="input_info" type="text" name="First name" required>
+          <input id="input_info_firstName" type="text" name="First name" required>
             <label><u>Last name</u></label>
-            <input id="input_info" type="text" name="Last name" required>
+            <input id="input_info_LastName" type="text" name="Last name" required>
           <label><u>Street adress</u></label>
-          <input id="input_info" type="text" name="Street adress" required>
+          <input id="input_info_adress" type="text" name="Street adress" required>
           <label><u>Zip code</u></label>
-          <input id="input_info" type="text" name="Zip code" pattern="[0-9]+" required >
+          <input id="input_info_zipCode" type="text" name="Zip code" pattern="[0-9]+" required >
         <label><u>City</u></label>
-        <input id="input_info" type="text" name="City" required>
+        <input id="input_info_city" type="text" name="City" required>
             <label><u>Country</u></label>
             <select id="country" name="country" required>
-    <option value="se"> </option>
-    <option value="se">Sweden</option>
-    <option value="de">Denmark</option>
-    <option value="no">Norway</option>
+    <option value="Sweden"> </option>
+    <option value="Sweden">Sweden</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Norway">Norway</option>
   </select>
           <label><u>Email</u></label>
-          <input id="input_info" type="email" name="Email" required>
+          <input id="input_info_email" type="email" name="Email" required>
       </span>
       <span class="form_bottom">
       <table class="shipping" >
@@ -77,19 +78,19 @@
         </tr>
         <tr>
           <td><label>Standard</label></td>
-          <td><input id="shipping_standard" type="radio" name="radio1"></td>
+          <td><input id="shipping_standard" datatype="29" type="radio" name="radio1" value="Standard: 29 Sek"></td>
         </tr>
         <tr>
           <td><label>Express</label></td>
-          <td><input id="shipping_express" type="radio" name="radio1"></td>
+          <td><input id="shipping_express" datatype="100" type="radio" value="Express: 100 Sek" name="radio1"></td>
         </tr>
         <tr>
           <td><label>Home delivery</label></td>
-          <td><input id="shipping_home" type="radio" name="radio1"></td>
+          <td><input id="shipping_home" datatype="150" type="radio" value="Home delivery: 150 Sek" name="radio1"></td>
         </tr>
         <tr>
           <td><label>Store pickup</label></td>
-          <td><input id="shipping_pickup" type="radio" name="radio1"></td>
+          <td><input id="shipping_pickup" datatype="20" type="radio" value="Store pickup: 20 Sek" name="radio1"></td>
         </tr>
       </table>
 
@@ -99,24 +100,24 @@
         </tr>
         <tr>
           <td><label>Card</label></td>
-          <td><input type="radio" name="radio"></td>
+          <td><input type="radio" value="Card" name="radio"></td>
         </tr>
         <tr>
           <td><label>Klarna</label></td>
-          <td><input type="radio" name="radio"></td>
+          <td><input type="radio" value="Klarna" name="radio"></td>
         </tr>
         <tr>
           <td><label>Swish</label></td>
-          <td><input type="radio" name="radio"></td>
+          <td><input type="radio" value="Swish" name="radio"></td>
         </tr>
         <tr>
           <td><label>Bitcoin</label></td>
-          <td><input type="radio" name="radio"></td>
+          <td><input type="radio" value="Bitcoin" name="radio"></td>
         </tr>
       </table>
      </span>
 
-     <!--här är till en ny grej-->
+
 
      <span>
       <table id="last_total">
@@ -126,11 +127,11 @@
         </tr>
         <tr>
           <td>Shipping:</td>
-          <td class = "shipping_total">98sek</td>
+          <td class = "shipping_total"></td>
         </tr>
         <tr>
           <td><u>Total</u>:</td>
-          <td class = "absolute_total">3313sek</td>
+          <td class = "absolute_total"></td>
         </tr>
       </table>
 
@@ -140,13 +141,50 @@
       <input id="submit_button_checkout_mini" type="submit" name="" value="submit">
      </span>
 
-      </form>
+      </div>
+
 
   </main>
 
+  <div class="checkoutBox"></div>
+<div class="receiptTest">
+    <div class="close">x</div>
+
+    <h4 id="receiptId">Thank you for you purchase</h4>
+<div class="topBoxCheckout">
+    <div class="shippingBox">
+        <h6><u>Shipping Adress</u></h6>
+        <div id="tyFirstName"></div>
+        <div id="tyLastName"></div>
+        <div id="tyAdress"></div>
+        <div id="tyZipCode"></div>
+        <div id="tyCity"></div>
+        <div id="tyCountry"></div>
+        <div id="tyEmail"></div>
+
+    </div>
+
+    <div class="orderbox">
+        <h6><u>Order</u></h6>
+    </div>
+
+</div>
+    <div class="bottomBoxCheckout">
+        <div id="bottomBoxRight">
+            Total: <div class="absolute_total"></div>
+        </div>
+        <div id="bottomBoxLeft">
+            <u>Freight</u><div id="tyfreight"></div>
+            <div id="typayment"></div>
 
 
-<footer>
+        </div>
+    </div>
+</div>
+
+
+
+<footer id="checkoutFooter">
   <center><img class="break" src="images/break.png" alt="breakline"></center>
   <p class="followUs">Follow us:</p>
   <div class="socialMedia">
@@ -160,6 +198,7 @@
 
 <script src="data.js"></script>
 <script src="js.js"></script>
+<script src="callejs.js"></script>
 </body>
 
 </html>
