@@ -39,7 +39,7 @@
 
 </span>
       <ul id="total">
-          <li>Vat 25%: 803,25sek</li>
+          <li class = "vat_top">Vat 25%: 803,25sek</li>
           <li id="totalsek"><u>Total</u></li>
           <li class = "total" id="totalsek"></li>
           <li>SCROLL DOWN TO PLACE ORDER!</li>
@@ -76,19 +76,19 @@
         </tr>
         <tr>
           <td><label>Standard</label></td>
-          <td><input type="radio" name="radio1"></td>
+          <td><input id="shipping_standard" type="radio" name="radio1"></td>
         </tr>
         <tr>
           <td><label>Express</label></td>
-          <td><input type="radio" name="radio1"></td>
+          <td><input id="shipping_express" type="radio" name="radio1"></td>
         </tr>
         <tr>
           <td><label>Home delivery</label></td>
-          <td><input type="radio" name="radio1"></td>
+          <td><input id="shipping_home" type="radio" name="radio1"></td>
         </tr>
         <tr>
           <td><label>Store pickup</label></td>
-          <td><input type="radio" name="radio1"></td>
+          <td><input id="shipping_pickup" type="radio" name="radio1"></td>
         </tr>
       </table>
 
@@ -121,15 +121,15 @@
       <table id="last_total">
         <tr>
           <td>Vat 25%:</td>
-          <td>803,25sek</td>
+          <td class = "vat"></td>
         </tr>
         <tr>
           <td>Shipping:</td>
-          <td>98sek</td>
+          <td class = "shipping_total">98sek</td>
         </tr>
         <tr>
           <td><u>Total</u>:</td>
-          <td>3313sek</td>
+          <td class = "absolute_total">3313sek</td>
         </tr>
       </table>
 

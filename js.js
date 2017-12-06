@@ -56,6 +56,7 @@ $(document).ready(function () {
 
     //CHECKOUT FUNCTIONS
     if ($("body#checkout_page").length > 0) {
+        var shippingCost = 29;
         drawTable();
         calculatePrice();
 
@@ -104,14 +105,24 @@ $(document).ready(function () {
         });
 
         function calculatePrice() {
+            var vat = 0;
+            var delivery = 0;
+            var subTotal = 0;
             var total = 0;
             var existingEntries = JSON.parse(localStorage.getItem("itemList"));
             if (existingEntries == null) existingEntries = [];
             for (var i = 0; i < existingEntries.length; i++) {
-                total += existingEntries[i].price * existingEntries[i].quantity;
+                subTotal += existingEntries[i].price * existingEntries[i].quantity;
             }
-            $(".total").html(total);
-            console.log('TOTAL PRICE IS' + ' ' + total + ':-');
+            vat = subTotal * 0.25;
+            total = subTotal + vat;
+
+
+            $("#totalsek").html(subTotal + ":-");
+            $(".vat").html(vat + ":-");
+            $(".vat_top").html("Vat 25%: " + vat + ":-");
+            $(".absolute_total").html(total + shippingCost + ":-");
+            $(".shipping_total").html(shippingCost);
         }
 
         $('.product_list').on("click", '#input', function () {
@@ -127,6 +138,25 @@ $(document).ready(function () {
 
 
     }
+    $(".form_bottom").on("click", 'input', function(){
+        var shipping = $(this).attr('id');
+
+        switch(shipping) {
+            case 'shipping_standard':
+                shippingCost = 29;
+                break;
+            case 'shipping_express':
+                shippingCost = 100;
+                break;
+            case 'shipping_home':
+                shippingCost = 150;
+                break;
+            case 'shipping_pickup':
+                shippingCost = 20;
+                break;
+        }
+    calculatePrice();
+    });
 
     function countTotalQuantity() {
         var total = 0;
