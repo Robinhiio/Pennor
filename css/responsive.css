@@ -2,15 +2,16 @@ body{
   font-family: Courier New;
 }
 .cart{
-  display: flex;
-  flex-direction: row;
+
+}
+.cart_a{
+  display: inline-block;
 }
 .cart_image{
   width: 60px;
   height: 60px;
 }
 .cart_quantity{
-  margin-right: 10px;
   font-weight: bold;
 }
 .indexHeader{
@@ -26,6 +27,10 @@ header{
   z-index: 10;
   background: #ffffff;
   width: 100%;
+}
+.header_top{
+  display: flex;
+  justify-content: space-between;
 }
 
 #nav > ul{

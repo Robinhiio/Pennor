@@ -10,15 +10,21 @@
 <body>
 <header id="header">
     <div class="container">
-        <button class="logo">
-            <img src="images/pennorLogo_mini_test.png" alt="Logo" title="Pennor.com">
-        </button>
+        <div class="header_top">
+            <button class="logo">
+                <img src="images/pennorLogo_mini_test.png" alt="Logo" title="Pennor.com">
+            </button>
+            <div class="cart">
+                <a class = "cart_a" href="checkout.html"><img class="cart_image" src="images/cart.png"></a>
+                <p class="cart_quantity"></p>
+            </div>
+        </div>
         <div id="nav">
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li class="cart"><a href="checkout.html"><img class = "cart_image" src="images/cart.png"></a></li>
+                <li><a href="checkout.html">Checkout</a></li>
             </ul>
         </div>
     </div>
@@ -29,24 +35,24 @@
     <div class=products_description_section>
         <div class=item_description_div>
             <img class="item_description_img" src="images/auto2.jpg" height="472" width="600"/>
-            <h3 class = "item_description_h3" ></h3>
-            <p class = item_description_p></p>
-            <p class = item_price></p>
+            <h3 class="item_description_h3"></h3>
+            <p class=item_description_p></p>
+            <p class=item_price></p>
             <!--//new from Linn-->
             <button id="displayCommentSection" type="button" name="button">Display Comments</button>
             <div id="commentsSection">
-              <p> here's a comment</p>
-              <button id="leaveComment"type="button" name="button">Leave a comment</button>
-              <form class="yourComment" action="index.html" method="post">
-                <label>Name</label>
-                <input type="text" name="firstName" required>
-                <label>Comment</label>
-                <textarea name="comment" rows="8" cols="80">Your comment here...</textarea>
-                <input type="submit" name="submit" value="Submit">
-              </form>
+                <p> here's a comment</p>
+                <button id="leaveComment" type="button" name="button">Leave a comment</button>
+                <form class="yourComment" action="index.html" method="post">
+                    <label>Name</label>
+                    <input type="text" name="firstName" required>
+                    <label>Comment</label>
+                    <textarea name="comment" rows="8" cols="80">Your comment here...</textarea>
+                    <input type="submit" name="submit" value="Submit">
+                </form>
             </div>
             <!--//new from Linn-->
-            <button class = "addCart">Add to cart</button>
+            <button class="addCart">Add to cart</button>
         </div>
     </div>
 </main>
