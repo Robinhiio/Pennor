@@ -436,6 +436,11 @@ footer
   padding-bottom: 1vw;
   margin-bottom: 1vh;
 }
+.undo{
+align-self: flex-end;
+  margin-right: 210px;
+  margin-top: 50px;
+}
 
 #shipping
 {
