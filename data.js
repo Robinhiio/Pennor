@@ -46,4 +46,20 @@ var items = [item1 = {
         price: 1568,
         discount: true,
         quantity: 1
+    },
+    item7 = {
+        title: 'Sakura Pigma Micron 7 piece set \'Black\'',
+        imageURL: 'images/SakuraPigmaMicron.jpg',
+        description: 'This permanent, fade resistant, pigment-based ink will not bleed or run if liquids are spilled on it. These Pigma Micron Fineliners comes in a pack of 7 with sizes from the small .20 mm to .50 mm and are used by artists all over the world to create fine and precise lines',
+        price: 149,
+        discount: true,
+        quantity: 1
+    },
+    item8 = {
+      title: 'Staedtler Triplus Fineliner 10 piece set',
+      imageURL: 'images/StaedtlerTriplusFineliner.jpg',
+      description: 'The Staedtler Triplus Fineliner is a super fine long-lasting pen with waterbased ink in bright colors. With a metal clad tip and triangular barrel, these fineliners provides fatigue free usage and they are dry safe, meaning the cap can be left off for days without the ink drying up.',
+      price: 129,
+      discount: true,
+      quantity: 1
     }];
