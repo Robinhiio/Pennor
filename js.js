@@ -37,7 +37,7 @@ $(document).ready(function () {
         $(".item_description_img").attr('src', imageURL);
         $(".item_description_h3").html(title);
         $(".item_description_p").html(description);
-        $(".item_price").html('Price: ' + price + ' kr');
+        $(".item_price").html('Price: ' + price + ' SEK');
     });
 
     $(".addCart").on("click", function () {
@@ -144,4 +144,3 @@ $(document).ready(function () {
 */
 
 });
-
